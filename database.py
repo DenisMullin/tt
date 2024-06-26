@@ -24,6 +24,7 @@ class UsersOrm(Model):
     email: Mapped[str] = mapped_column(String)
     phone: Mapped[str] = mapped_column(String)
     is_admin: Mapped[int] = mapped_column(Integer, default=0)
+    fav_tasks: Mapped[Optional[JSON]] = mapped_column(type_=JSON, nullable=True)
 
 
 class ProjectsOrm(Model):

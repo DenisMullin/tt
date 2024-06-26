@@ -129,12 +129,12 @@ async def get_by_user_id(
     return await HistoryRepository.get_by_user_id(user_id)
 
 
-@router_history.post('/get_by_user_id_test')
-async def get_by_user_id_test(
-        field_name: str,
-        value: int
-) -> Optional[list[SHistoryElements]]:
-    return await HistoryRepository.get_list_by_field(field_name, value)
+# @router_history.post('/get_by_user_id_test')
+# async def get_by_user_id_test(
+#         field_name: str,
+#         value: int
+# ) -> Optional[list[SHistoryElements]]:
+#     return await HistoryRepository.get_list_by_field(field_name, value)
 
 
 @router_history.post('/update_files')
